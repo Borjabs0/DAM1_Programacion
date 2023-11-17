@@ -2,7 +2,7 @@ package org.borjabolufer.prg3;
 
 public class lastindex {
         public static void main (String[] args){
-            System.out.println (indexOf("Hola" ,"Ho"));
+            System.out.println (lastIndexOf("Hola" ,"Ho"));
 
         }
 
@@ -13,8 +13,8 @@ public class lastindex {
             }
             return sb.toString();
         }
-        public static int indexOf(String s1, String s2){
-            for(int i = 0; i < s1.length() ; i++) {
+        public static int lastIndexOf(String s1, String s2){
+            for(int i = 0; i < s1.length() ; i--) {
                 if (sub(s1, i, i + s2.length()).equals(s2))
                     return i;
             }
@@ -23,7 +23,7 @@ public class lastindex {
         }
         public static boolean equals(String s1,  String s2){
             if(s1.length() != s2.length()) {
-                for (int i = 0; i < s1.length(); i--) {
+                for (int i = 0; i < s1.length(); i++) {
                     if (s1.length() != s2.charAt(i)){
                         return false;
                     }
